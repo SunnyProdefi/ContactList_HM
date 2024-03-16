@@ -85,32 +85,31 @@ void addContact(struct AddressBook *abs) {
     abs->contacts[abs->m_Size].name = name;
     int sex;
     cout << "Please enter the sex: " << endl;
-    cout << "0---Ů" << endl;
-    cout << "1---��" << endl;
+    cout << "0---woman" << endl;
+    cout << "1---man" << endl;
     while (true) {
       cin >> sex;
       if (sex == 0 || sex == 1) {
         abs->contacts[abs->m_Size].m_Sex = sex;
         break;
       }
-
       cout << "Please enter the sex: " << endl;
     }
-    int age;
-    cout << "Please enter the age: " << endl;
-    cin >> age;
-    abs->contacts[abs->m_Size].m_Age = age;
-    string phone;
-    cout << "Please enter the phone: " << endl;
-    cin >> phone;
-    abs->contacts[abs->m_Size].m_Phone = phone;
-    string addr;
-    cout << "Please enter the address: " << endl;
-    cin >> addr;
-    abs->contacts[abs->m_Size].m_Addr = addr;
-    abs->m_Size++;
-    cout << "Add contact successfully" << endl;
-    system("pause");
-    system("cls");
   }
+  int age;
+  cout << "Please enter the age: " << endl;
+  cin >> age;
+  abs->contacts[abs->m_Size].m_Age = age;
+  string phone;
+  cout << "Please enter the phone: " << endl;
+  cin >> phone;
+  abs->contacts[abs->m_Size].m_Phone = phone;
+  string addr;
+  cout << "Please enter the address: " << endl;
+  cin >> addr;
+  abs->contacts[abs->m_Size].m_Addr = addr;
+  abs->m_Size++;
+  cout << "Add contact successfully" << endl;
+  system("pause");
+  system("cls");
 }
